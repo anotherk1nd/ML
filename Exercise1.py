@@ -83,3 +83,15 @@ from sklearn.metrics import confusion_matrix
 
 cm = confusion_matrix(Y_test, Y_pred)
 print(cm)
+
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=10, shuffle=True)
+for learn,test in kf.split(X): # We learn on app and test on test
+    print("app : ", learn, "test ", test)
+
+print("Now with shuffle=False")
+kff = KFold(n_splits=10, shuffle=False)
+for learn,test in kf.split(X):
+    print("app : ", learn, "test ", test)
+
+
