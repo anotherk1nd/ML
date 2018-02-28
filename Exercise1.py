@@ -69,6 +69,8 @@ print(clf.predict([[ 5.4, 3.2, 1.6, 0.4]])) # [2]
 print(clf.predict_proba([[ 5.4, 3.2, 1.6, 0.4]])) # [3]
 print(clf.score(X,Y)) #[4]
 Z = clf.predict(X)# [5]
+
+print("here")
 print(X[Z!=Y])# [6]
 
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.3,random_state=random.seed()) #[7]

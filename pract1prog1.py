@@ -1,5 +1,10 @@
 from sklearn.datasets import load_iris
+import sys
 irisData = load_iris()
+X = irisData.data
+Y = irisData.target
+x = 0
+y = 1
 from matplotlib import pyplot as plt
 
 colors = ["red", "green", "blue"]

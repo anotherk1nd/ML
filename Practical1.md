@@ -185,6 +185,15 @@ imports the confusion_matrix function
 #[11]
 cm = confusion_matrix(Y_test, Y_pred)
 print(cm)
-Prints the confusion matrix, with layout that 
+Prints the confusion matrix, with layout that gives # correctly classified examples in each class, and the false positives and negatives
 [[0 6]
  [0 2]]
+ 
+#[12]
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=10, shuffle=True)
+for learn,test in kf.split(X):
+print("app : ", learn, " test ", test)
+ When shuffle=false is used, ...
+ 
+#[13]
